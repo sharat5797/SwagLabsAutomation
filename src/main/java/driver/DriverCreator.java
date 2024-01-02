@@ -19,7 +19,7 @@ public class DriverCreator {
             default:
                 WebDriver webDriver = new ChromeDriverManager().create();
                 ChromeOptions options = new ChromeOptions();
-                options.setBrowserVersion("116.0.5845.111");
+                options.setBrowserVersion("120.0.6099.109");
                 return webDriver;
         }
     }

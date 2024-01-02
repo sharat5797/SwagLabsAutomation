@@ -15,7 +15,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.16.1'
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
-    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.4.3'
+    implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.6.3'
     // https://mvnrepository.com/artifact/io.qameta.allure/allure-testng
     implementation group: 'io.qameta.allure', name: 'allure-testng', version: '2.25.0'
     // https://mvnrepository.com/artifact/org.testng/testng
@@ -24,10 +24,7 @@ dependencies {
     implementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.30'
-    implementation 'org.seleniumhq.selenium:selenium-java:3.141.59'
-    implementation 'org.seleniumhq.selenium:selenium-firefox-driver:3.141.59'
-    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:3.141.59'
-    implementation 'org.seleniumhq.selenium:selenium-edge-driver:3.141.59'
+
 }
 
 

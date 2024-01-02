@@ -4,6 +4,7 @@ import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import io.github.bonigarcia.wdm.managers.EdgeDriverManager;
 import io.github.bonigarcia.wdm.managers.FirefoxDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.Objects;
 
@@ -17,6 +18,8 @@ public class DriverCreator {
                 return new EdgeDriverManager().create();
             default:
                 WebDriver webDriver = new ChromeDriverManager().create();
+                ChromeOptions options = new ChromeOptions();
+                options.setBrowserVersion("116.0.5845.111");
                 return webDriver;
         }
     }

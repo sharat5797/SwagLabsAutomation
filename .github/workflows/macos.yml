@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Java CI with Gradle on MacOS
 
 on:
   push:
@@ -26,7 +26,7 @@ jobs:
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
       - name: Install Chrome
         run: |
-          brew cask install google-chrome
+          brew install google-chrome --cask
       - name: Build with Gradle
         run: gradle clean test
       - name: Install Allure

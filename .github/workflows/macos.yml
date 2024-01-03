@@ -34,14 +34,10 @@ jobs:
           brew install allure
       - name: Generate Allure Report
         run: |
-          allure serve allure-results
-      - name: Prepare Report Directory
-        run: |
-          mkdir -p report/allure-results
-          cp -r build/allure-results/* report/allure-results
-      - name: Deploying to Github Pages
+          allure generate --clean
+      - name: Deploy to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: report
+          publish_dir: allure-report

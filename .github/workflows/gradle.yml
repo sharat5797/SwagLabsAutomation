@@ -1,4 +1,4 @@
-name: Java CI with Gradle
+name: Java CI with Gradle on Ubuntu
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
@@ -23,22 +23,21 @@ jobs:
           distribution: 'temurin'
       - name: Install Chrome
         run: |
-          choco install googlechrome --yes
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
       - name: Build with Gradle
         run: gradle clean test
       - name: Install Allure
         run: |
-          choco install allure --yes
+          sudo apt-add-repository -y ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install -y allure
       - name: Generate Allure Report
         run: |
-          allure serve allure-results
-      - name: Prepare Report Directory
-        run: |
-          mkdir -p report/allure-results
-          cp -r build/allure-results/* report/allure-results
-      - name: Deploying to Github Pages
+          allure generate --clean
+      - name: Deploy to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GIT_TOKEN }}
-          publish_dir: report
+          publish_dir: allure-report

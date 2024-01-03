@@ -1,5 +1,6 @@
 import driver.DriverCreator;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import pages.LoginPage;
@@ -15,7 +16,7 @@ public class BaseTest {
         driver.get("https://www.saucedemo.com/");
         loginPage = new LoginPage(driver);
     }
-    @AfterTest
+    @AfterClass
     public void quitDriver(){
         driver.quit();
     }

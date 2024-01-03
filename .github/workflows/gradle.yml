@@ -26,6 +26,9 @@ jobs:
           choco install googlechrome --yes
       - name: Build with Gradle
         run: gradle clean test
+      - name: Install Allure
+        run: |
+          choco install allure --yes
       - name: Generate Allure Report
         run: |
           allure serve allure-results

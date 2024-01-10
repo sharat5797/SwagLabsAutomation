@@ -15,6 +15,8 @@ public class LoginPage {
     WebElement password;
     @FindBy(id = "login-button")
     WebElement loginBtn;
+    @FindBy(xpath = "//*[@id=\"login_button_container\"]/div/form/div[3]/h3")
+    WebElement error;
     public Boolean verifyPageTitle(String heading){
        return titel.getText().equals(heading);
     }
@@ -25,7 +27,11 @@ public class LoginPage {
     public void clickLoginBtn(){
         loginBtn.click();
     }
+    public String getErrorText(){
+        return error.getText();
+    }
     public LoginPage (final WebDriver driver){
         PageFactory.initElements(driver,this);
     }
+
 }

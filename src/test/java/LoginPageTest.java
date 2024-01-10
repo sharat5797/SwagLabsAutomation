@@ -6,8 +6,7 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
 
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+import static org.testng.Assert.*;
 
 public class LoginPageTest extends BaseTest{
     HomePage homePage;
@@ -22,4 +21,10 @@ public class LoginPageTest extends BaseTest{
         homePage = new HomePage(driver);
         assertEquals(homePage.getHeading(),"Swag Labs");
     }
+//    @Test
+//    public void isLoginFail(){
+//        loginPage.enterCredentials("standard_user123456","secret_sauce");
+//        loginPage.clickLoginBtn();
+//        assertEquals(loginPage.getErrorText(),"Epic sadface: Username and password do not match any user in this service");
+//    }
 }

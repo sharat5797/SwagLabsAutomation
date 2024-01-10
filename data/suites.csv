@@ -1,3 +1,4 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Wed Jan 03 11:29:06 IST 2024","Wed Jan 03 11:29:07 IST 2024","491","Gradle suite","Gradle test","LoginPageTest","LoginPageTest","isLoginSuccesfull","isLoginSuccesfull",""
-"passed","Wed Jan 03 11:29:06 IST 2024","Wed Jan 03 11:29:06 IST 2024","42","Gradle suite","Gradle test","LoginPageTest","LoginPageTest","isHeadingPresent","isHeadingPresent",""
+"passed","Tue Jan 09 09:44:55 UTC 2024","Tue Jan 09 09:44:56 UTC 2024","468","Gradle suite","Gradle test","LoginPageTest","LoginPageTest","isLoginFail","isLoginFail",""
+"passed","Wed Jan 10 12:09:32 UTC 2024","Wed Jan 10 12:09:32 UTC 2024","55","Gradle suite","Gradle test","LoginPageTest","LoginPageTest","isHeadingPresent","isHeadingPresent",""
+"passed","Wed Jan 10 12:09:32 UTC 2024","Wed Jan 10 12:09:33 UTC 2024","621","Gradle suite","Gradle test","LoginPageTest","LoginPageTest","isLoginSuccesfull","isLoginSuccesfull",""
